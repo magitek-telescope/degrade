@@ -10,12 +10,19 @@ async function run() {
     console.error('Missing option')
     process.exit(1)
   }
-  const filePathList = (await glob(targetGlob)).filter((path) => {
-    return path.split('/')[path.split('/').length-1].includes(before)
-  })
+  const filePathList = (await glob(targetGlob))
   console.log(filePathList.join('\n'))
-  await filePathList.map( async (path) => {
-    return await fs.rename(path, path.replace(before, after))
+  await filePathList.map(async (path) => {
+    const text = await fs.readFile(path, { encoding: 'utf8' })
+    const result = text.replace(new RegExp(before, 'g'), after)
+    if (text === result) {
+      return
+    }
+    await fs.writeFile(
+      path,
+      result,
+      { encoding: 'utf8' }
+    )
   })
 }
 

@@ -1,12 +1,15 @@
 {
-  "name": "fu",
-  "version": "1.0.0",
+  "name": "degrade",
+  "version": "0.1.0",
   "main": "index.js",
-  "repository": "ssh://git@github.com/potato4d/fu.git",
+  "repository": "ssh://git@github.com/potato4d/degrade.git",
   "author": "Takuma HANATANI <mail@potato4d.me>",
   "license": "MIT",
   "bin": {
     "rf": "./dist/rf"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x ./dist/*.js"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
