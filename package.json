@@ -1,0 +1,24 @@
+{
+  "name": "fu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/potato4d/fu.git",
+  "author": "Takuma HANATANI <mail@potato4d.me>",
+  "license": "MIT",
+  "bin": {
+    "rf": "./dist/rf"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.2",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "chalk": "^3.0.0",
+    "glob": "^7.1.6"
+  }
+}
