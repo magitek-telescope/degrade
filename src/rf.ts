@@ -1,11 +1,10 @@
-#!/usr/bin/env node
 import _glob from 'glob'
 import { promisify } from 'util'
 import { promises as fs } from 'fs'
 const glob = promisify(_glob)
 
-async function run() {
-  const [before, after, targetGlob] = process.argv.filter((_, i) => i > 1)
+export async function rf(argv: string[]) {
+  const [before, after, targetGlob] = argv
   if (!(before && after && targetGlob)) {
     console.error('Missing option')
     process.exit(1)
@@ -18,5 +17,3 @@ async function run() {
     return await fs.rename(path, path.replace(before, after))
   })
 }
-
-run()

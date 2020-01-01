@@ -1,15 +1,14 @@
 {
   "name": "degrade",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "ssh://git@github.com/potato4d/degrade.git",
   "author": "Takuma HANATANI <mail@potato4d.me>",
   "license": "MIT",
   "bin": {
-    "rf": "./dist/rf.js",
-    "rt": "./dist/rt.js"
+    "degrade": "./dist/cli.js"
   },
   "scripts": {
-    "build": "tsc && chmod +x ./dist/*.js"
+    "build": "tsc && chmod +x ./dist/cli.js"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
@@ -17,10 +16,11 @@
     "@types/node": "^13.1.2",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.5.4",
+    "@types/chalk": "^2.2.0",
     "typescript": "^3.7.4"
   },
   "dependencies": {
-    "@types/chalk": "^2.2.0",
+    "consola": "^2.11.3",
     "chalk": "^3.0.0",
     "glob": "^7.1.6"
   }
