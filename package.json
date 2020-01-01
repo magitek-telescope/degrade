@@ -1,6 +1,6 @@
 {
   "name": "degrade",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "ssh://git@github.com/potato4d/degrade.git",
   "author": "Takuma HANATANI <mail@potato4d.me>",
   "license": "MIT",
